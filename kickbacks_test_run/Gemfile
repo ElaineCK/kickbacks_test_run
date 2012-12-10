@@ -13,8 +13,6 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails', '~> 3.2'
   gem 'coffee-rails', '~> 3.2.1'
-  #gem 'twitter-bootstrap-rails'
-  #gem 'less-rails-bootstrap'
   gem 'bootstrap-sass', '~> 2.2.1.1'
   #gem 'simple_form'
 
