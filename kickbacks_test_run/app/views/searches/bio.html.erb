@@ -1,3 +1,36 @@
+<!-- Le styles -->
+  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href= "/">Kickback</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li><%= link_to "Kickback Bio", bio_path %></li>
+              <li><%= link_to "Videos", videos_path %></li>
+              <li><%= link_to "Fan Base", fanbase_path %></li>
+              <li><%= link_to "About CK Interns", about_path %></li>
+              <!-- <li><a href="#bio">Kickback Bio</a></li> -->
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
 Biography of Kickback
 
 <div class="container-fluid">

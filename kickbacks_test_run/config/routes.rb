@@ -1,6 +1,12 @@
 KickbacksTestRun::Application.routes.draw do
 
   root(:to => 'searches#index')
+
+  get 'searches/bio' => 'searches#bio', :as => 'bio'
+  get 'searches/videos' => 'searches#videos', :as => 'videos'
+  get 'searches/fanbase' => 'searches#fanbase', :as => 'fanbase'
+  get 'searches/about' => 'searches#about', :as => 'about'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
