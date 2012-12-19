@@ -1,20 +1,13 @@
-<!-- Le styles -->
-  <link href="../assets/css/bootstrap.css" rel="stylesheet">
+
     <style>
       body {
         padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
       }
     </style>
-    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
            <a class="brand" href= "/">Kickback</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
@@ -22,8 +15,15 @@
               <li><%= link_to "Videos", video_path %></li>
               <li><%= link_to "Fan Base", fanbase_path %></li>
               <li><%= link_to "About CK Interns", about_path %></li>
+              <%if user_signed_in? %>
+                Signed in as <%= current_user.email %>. Not You?
+                <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+              <%else %>
+               <%= link_to "Sign Up", new_user_registration_path %> or 
+                <%= link_to "Sign In", new_user_session_path %>
+              <% end %>
             </ul>
-          </div><!--/.nav-collapse -->
+         </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
